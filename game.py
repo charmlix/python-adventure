@@ -1,7 +1,7 @@
 ####################################
-#        Author: Amber Lee         #
-# Email: cryptoboxcomics@gmail.com #
-#      Info: A choose-your-own     #
+#        Author: Charamine Mcveigh #
+# Email: charmlix2002@yahoo.com    #
+#      Info: sysadmin              #
 #          adventure game          #
 ####################################
 
@@ -9,7 +9,7 @@ player_name = ""
 player_health = 100
 player_money = 50
 player_species = "Human"
-player_weapons = []
+player_weapons = ['Sword', 'spear', 'shield' ]
 player_items = []
 
 ####################################
@@ -36,7 +36,7 @@ print("Hi, " + player_name + "! You are our hero and savior! Please save the Kan
 print("You start off with no weapons or items, but if you make the right choices, you might survive.")
 print()
 
-#    ---Section Author: <your name>---   #
+#    ---Section Author: <charmaine>---   #
 print("You pass by a traveler who looks injured by the woods. What do you do?")
 print("1. Ignore him")
 print("2. Try to help him")
@@ -52,4 +52,21 @@ elif (decision == "2"):
     player_items.append("Potion")
     print("Your items now: ")
     print(player_items)
-#            ---section end---           #
+
+print("The Kanbalese police stop you and try to collect taxes from you! What do you do!")
+print("1. Fight the police")
+print("2. Just pay your taxes")
+decision = ""
+while(decision == ""):
+    decision = input("Pick a number")
+    if (decision == "1"):
+        print("You got arrested! Game over!")
+        exit()
+    elif (decision == "2"):
+        print("You lost all your money")
+        player_money = player_money * 0.8
+        print("The money you have left is:")
+        print(str(player_money))
+    else:
+        print("Please enter 1 or 2")
+    #            ---section end---           #
